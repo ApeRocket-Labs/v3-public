@@ -1,0 +1,24 @@
+networks:
+  default: bsc-hardhat
+  explorer: https://bscscan.com/ 
+
+project_structure:
+  contracts: src
+
+compiler:
+  solc:
+    version: 0.8.10
+    optimize: true
+    run: 200
+    remappings:
+      - "solmate/=lib/solmate/src/"
+      - "ds-test/=lib/ds-test/src/"
+
+  vyper:
+    version: 0.2.0
+
+reports:
+  exclude_contracts:
+    - SafeMath
+    - SafeERC20
+    - Address

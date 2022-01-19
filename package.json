@@ -1,0 +1,22 @@
+{
+    "name": "@aperocket/v3",
+    "license": "AGPL-3.0-only",
+    "version": "1.0.0",
+    "files": [
+        "src/**/*.sol"
+    ],
+    "devDependencies": {
+        "prettier": "^2.3.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.13"
+    },
+    "scripts": {
+        "b": "forge build",
+        "t": "forge test --fork-url https://speedy-nodes-nyc.moralis.io/cede2bf2868b0e93070abef2/bsc/mainnet/archive",
+        "tv": "forge test -vvv --fork-url https://speedy-nodes-nyc.moralis.io/cede2bf2868b0e93070abef2/bsc/mainnet/archive",
+        "tvy": "forge test -vvv --fork-url https://rpc.tenderly.co/fork/386ce22b-2c6f-4094-a6f8-aa33715788c4",
+        "l": "prettier --write \"src/**/**/*.sol\" && black ."
+    },
+    "dependencies": {
+        "hardhat": "^2.8.0"
+    }
+}
