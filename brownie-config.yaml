@@ -16,9 +16,3 @@ compiler:
 
   vyper:
     version: 0.2.0
-
-reports:
-  exclude_contracts:
-    - SafeMath
-    - SafeERC20
-    - Address

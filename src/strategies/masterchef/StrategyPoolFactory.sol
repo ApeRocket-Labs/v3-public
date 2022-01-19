@@ -26,8 +26,10 @@ contract StrategyPoolFactory is Auth {
     //////////////////////////////////////////////////////////////*/
 
     /// @notice Emitted when a new Strategy is deployed.
-    /// @param strategy The newly deployed Vault contract.
-    /// @param underlying The underlying token the new Vault accepts.
+    /// @param strategy The newly deployed Strategy contract.
+    /// @param underlying The underlying token the new Strategy accepts.
+    /// @param reward The reward token the new Strategy earns and sells to underlying.
+    /// @param smartChef The contract the new Strategy deposit underlying.
     event StrategyPoolDeployed(StrategyPoolStaking strategy, ERC20 underlying, ERC20 reward, address indexed smartChef);
 
     /// @notice Deploys a new Strategy which supports a specific underlying token.
@@ -63,6 +65,8 @@ contract StrategyPoolFactory is Auth {
                             STRATEGY LOOKUP LOGIC
     //////////////////////////////////////////////////////////////*/
 
+    // TODO: Deploy another factory and store the strategies because this works well for vault, 
+    // not for strategies.
     function getStrategy(
         ERC20 _underlying,
         ERC20 _reward,

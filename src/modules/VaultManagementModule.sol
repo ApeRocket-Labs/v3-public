@@ -11,7 +11,7 @@ import {ERC20Strategy, Vault} from "../Vault.sol";
 contract VaultManagementModule is Auth {
     constructor(address _owner, Authority _authority) Auth(_owner, _authority) {}
 
-    /// @notice Kill a strategy and send back to vault fund
+    /// @notice Kill a strategy and send back funds to vault
     function kill(Vault vault, ERC20Strategy strategy) external requiresAuth {
         vault.seizeStrategy(strategy);
         strategy.fire();

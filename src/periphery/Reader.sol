@@ -12,7 +12,7 @@ interface IVault {
 
     function balanceOf(address user) external view returns (uint256);
 }
-
+/// @notice View contracts for frontend and external platforms
 contract Reader {
     struct UserInfo {
         uint256 allowance;

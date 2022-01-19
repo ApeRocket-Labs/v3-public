@@ -1,8 +1,8 @@
 export DAPP_REMAPPINGS=$(cat remappings.txt)
 export DAPP_SOLC_VERSION=0.8.10
+
 export DAPP_BUILD_OPTIMIZE=1
 export DAPP_BUILD_OPTIMIZE_RUNS=200
-export HEVM_RPC=yes
 
+export HEVM_RPC=yes
 export DAPP_LINK_TEST_LIBRARIES=0
-export ETH_RPC_URL=https://speedy-nodes-nyc.moralis.io/cede2bf2868b0e93070abef2/bsc/mainnet/archive
